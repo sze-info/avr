@@ -13,6 +13,9 @@ nav:
     - 1. Introduction: 
       - introduction/README.md
       - introduction/practice.md
+      - introduction/windows.md
+      - introduction/copilot.md
+      - introduction/linux.md
     - 2. ROS 2 concepts and install: 
       - ros2/README.md
       - ros2/practice.md
