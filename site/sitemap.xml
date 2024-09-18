@@ -2,377 +2,390 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://sze-info.github.io/avr/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://sze-info.github.io/avr/ai/</loc>
+         <lastmod>2024-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://sze-info.github.io/avr/ai/practice/</loc>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/bevezetes/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/bevezetes/copilot/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/bevezetes/gepterem/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/bevezetes/linux/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/bevezetes/practice/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/bevezetes/ros1/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/bevezetes/ros2/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/bevezetes/ros2gyak/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/bevezetes/vscode/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://sze-info.github.io/avr/control/</loc>
+         <lastmod>2024-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://sze-info.github.io/avr/control/practice/</loc>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/dataset/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/dataset/jkk_dataset_01/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/dataset/jkk_dataset_02/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/dataset/jkk_dataset_03/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/erzekeles/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/erzekeles/practice/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/eszleles/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/eszleles/ground_filter/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/eszleles/practice/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/eszleles/road_filter/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/eszleles/slam/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/feleves_beadando/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/feleves_beadando/kisbeadando/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/feleves_beadando/nagyfeleves/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/home/about/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/home/social/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/home/videos/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://sze-info.github.io/avr/introduction/</loc>
+         <lastmod>2024-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://sze-info.github.io/avr/introduction/practice/</loc>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/kalman_filter/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/kalman_filter/practice/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/linkek/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/mesterseges_intelligencia/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/mesterseges_intelligencia/practice/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/onallo/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/onallo/linux/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/onallo/mermaid/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/onallo/ros1lidarsimple/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/onallo/ros1node/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/onallo/ros1rosbag/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/onallo/ros2git/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/onallo/ros2launchmarker/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/papers/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://sze-info.github.io/avr/perception/</loc>
+         <lastmod>2024-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://sze-info.github.io/avr/perception/practice/</loc>
+         <lastmod>2024-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://sze-info.github.io/avr/planning/</loc>
+         <lastmod>2024-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://sze-info.github.io/avr/planning/practice/</loc>
+         <lastmod>2024-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://sze-info.github.io/avr/ros2/</loc>
+         <lastmod>2024-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://sze-info.github.io/avr/ros2/practice/</loc>
+         <lastmod>2024-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://sze-info.github.io/avr/ros2advanced/</loc>
+         <lastmod>2024-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://sze-info.github.io/avr/ros2advanced/practice/</loc>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/ros2halado/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/ros2halado/docker/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/ros2halado/mcap/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/ros2halado/pointcloud_to_grid/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/ros2halado/py_cpp/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/ros2halado/qos/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/ros2halado/ros2launch/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/ros2halado/rqt/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/ros2halado/state/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/ros2halado/vizualizacio/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://sze-info.github.io/avr/safety/</loc>
+         <lastmod>2024-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://sze-info.github.io/avr/safety/practice/</loc>
+         <lastmod>2024-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://sze-info.github.io/avr/sensing/</loc>
+         <lastmod>2024-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://sze-info.github.io/avr/sensing/practice/</loc>
+         <lastmod>2024-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://sze-info.github.io/avr/simulation/</loc>
+         <lastmod>2024-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://sze-info.github.io/avr/simulation/practice/</loc>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/szabalyozas/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/szabalyozas/ros1practice/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/szabalyozas/ros2practice/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/szimulacio/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/szimulacio/carla/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/szimulacio/gazebo_f1_10/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/szimulacio/gazebo_fortress/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/szimulacio/gazebo_prius/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/szimulacio/gazebo_robotverseny/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/szimulacio/gyakorlat/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/szimulacio/lgsvl_nissan/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/telepites/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/telepites/ros_humble/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/telepites/ubuntu/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/telepites/win10/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/tervezes/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/tervezes/planning_control_diagram/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/tervezes/practice/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://sze-info.github.io/avr/transformations/</loc>
+         <lastmod>2024-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://sze-info.github.io/avr/transformations/practice/</loc>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/transzformaciok/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/transzformaciok/practice/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/workshops/f1tenth_real_a/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/workshops/f1tenth_sim_a/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/workshops/ros2_a/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
     <url>
          <loc>https://sze-info.github.io/avr/workshops/wheeltec_real_a/</loc>
-         <lastmod>2024-07-19</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-09-18</lastmod>
     </url>
 </urlset>

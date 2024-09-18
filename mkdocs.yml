@@ -64,7 +64,7 @@ nav:
     - kalman_filter/README.md
     - kalman_filter/practice.md
   - Links:
-    - linkek/README.md
+    - links/README.md
   - Moodle: https://szelearning.sze.hu/course/view.php?id=13973
 theme:
   name: 'material'

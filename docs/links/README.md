@@ -1,43 +1,43 @@
 ---
-title: Linkek
-permalink: /linkek/
+title: Links
+permalink: /links/
 hide:
   # - toc
   - navigation
 ---
 
-# Linkek
+# Links
 
-## Linux ismeretek
+## Linux Knowledge
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ZtqBQ68cfJc?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-- Egyszerű linux parancsok - [[hun](https://github.com/horverno/sze-academic-rpi/blob/master/linuxtut.md)]
+- Simple Linux commands - [[hun](https://github.com/horverno/sze-academic-rpi/blob/master/linuxtut.md)]
 - ROS training - 0.1 Intro to Ubuntu GUI - [[eng](https://industrial-training-master.readthedocs.io/en/melodic/_source/prerequisites/Navigating-the-Ubuntu-GUI.html)]
 - ROS training - 0.2 The Linux File System - [[eng](https://industrial-training-master.readthedocs.io/en/melodic/_source/prerequisites/Exploring-the-Linux-File-System.html)]
 - ROS training - 0.3 Using the Terminal - [[eng](https://industrial-training-master.readthedocs.io/en/melodic/_source/prerequisites/The-Linux-Terminal.html)]
-- Terminal kezelése - [[hun](https://github.com/horverno/sze-academic-rpi/blob/master/linuxtut.md)]
+- Terminal usage - [[hun](https://github.com/horverno/sze-academic-rpi/blob/master/linuxtut.md)]
 - 60 Linux Commands you need to know [[video, eng](https://www.youtube.com/watch?v=gd7BXuUQ91w)]
 - The 50 Most Popular Linux & Terminal Commands, freeCodeCamp [[video, eng](https://youtu.be/ZtqBQ68cfJc)]
-- Raspberry Pi-hez készült segédanyag: [[hun](https://github.com/horverno/sze-academic-rpi)]
-- Git kezelése:
-  - Beadandó leírás, Git és GitHub - [[hun](https://github.com/horverno/sze-academic-rpi/blob/master/gittut.md)] 
-  - GitHub first-contributions magyar fordítás - [[hun](https://github.com/firstcontributions/first-contributions/blob/master/translations/README.hu.md)]
-  -  GitHub Learning Lab - [[eng](https://lab.github.com/)]
+- Raspberry Pi guide: [[hun](https://github.com/horverno/sze-academic-rpi)]
+- Git usage:
+  - Assignment description, Git and GitHub - [[hun](https://github.com/horverno/sze-academic-rpi/blob/master/gittut.md)] 
+  - GitHub first-contributions Hungarian translation - [[hun](https://github.com/firstcontributions/first-contributions/blob/master/translations/README.hu.md)]
+  - GitHub Learning Lab - [[eng](https://lab.github.com/)]
 - VS code - [[hun](https://github.com/horverno/sze-academic-rpi/blob/master/vscode.md)], [[vid](https://www.youtube.com/watch?v=QKFjbnWpQ-E)]
 - Python [[hun](https://github.com/horverno/sze-academic-python)]
-- Python freeCodeCamp video [[eng]](https://youtu.be/rfscVS0vtbw)
-- Python 60 days with python videos [[eng]](https://www.youtube.com/playlist?list=PL_mMpzhZWPmJpocdaZdGDHWK2-dOGGJbI)
+- Python freeCodeCamp video [[eng](https://youtu.be/rfscVS0vtbw)]
+- Python 60 days with python videos [[eng](https://www.youtube.com/playlist?list=PL_mMpzhZWPmJpocdaZdGDHWK2-dOGGJbI)]
 - C++ [[hun](https://github.com/hegyhati/ClassRoomExamples)]
 - C++ Optimizations Diary [[eng](https://cpp-optimizations.netlify.app/)]
 - C++ Code for yourself videos [[eng](https://www.youtube.com/@CodeForYourself)]
 
-## Robotikai ismeretek
+## Robotics Knowledge
 
-- Alap robotikai ismeretek [[eng](https://github.com/AtsushiSakai/PythonRobotics)]
-- Kálmán filter [[eng]](https://github.com/rlabbe/Kalman-and-Bayesian-Filters-in-Python)
-- Universitat Politècnica de Catalunya BarcelonaTech (UPC) - [[eng]](https://sir.upc.edu/projects/rostutorials/1-ROS_basic_concepts/index.html)
-- Pozna Tanár Úr és Antonya Csaba által írt angol nyelvű oktatóanyag - Autocarsim [[eng]](https://autocarsim.com/)
+- Basic robotics knowledge [[eng](https://github.com/AtsushiSakai/PythonRobotics)]
+- Kalman filter [[eng](https://github.com/rlabbe/Kalman-and-Bayesian-Filters-in-Python)]
+- Universitat Politècnica de Catalunya BarcelonaTech (UPC) - [[eng](https://sir.upc.edu/projects/rostutorials/1-ROS_basic_concepts/index.html)]
+- English tutorial by Professor Pozna and Csaba Antonya - Autocarsim [[eng](https://autocarsim.com/)]
 
 ### Stanford University
 - Stanford University - Introduction to Robotics Oussama Khatib - [[eng, video playlist](https://www.youtube.com/watch?v=0yD3uBshJB0&list=PL65CC0384A1798ADF&ab_channel=Stanford)]
@@ -64,14 +64,14 @@ hide:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ekOfzdQnPZw?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-## Magyar nyelvű ROS oktatóanyagok
-- ROS-gyakorlatok kezdőoldal: [horverno.github.io/ros-gyakorlatok](https://horverno.github.io/ros-gyakorlatok/)
-- [ROS telepítése (hun)](https://horverno.github.io/ros-gyakorlatok/0-linux-alapok/rosinstall.html) - Melodic
-- [ROS Óbudai Egytem - Antal Bejczy Center for Intelligent Robotics (hun)](https://abc-irobotics.github.io/ros_course_materials_hu)
+## Hungarian ROS Tutorials
+- ROS exercises homepage: [horverno.github.io/ros-gyakorlatok](https://horverno.github.io/ros-gyakorlatok/)
+- [ROS installation (hun)](https://horverno.github.io/ros-gyakorlatok/0-linux-alapok/rosinstall.html) - Melodic
+- [ROS Óbudai Egyetem - Antal Bejczy Center for Intelligent Robotics (hun)](https://abc-irobotics.github.io/ros_course_materials_hu)
 
-## Angol nyelvű ROS oktatóanyagok
+## English ROS Tutorials
 
-- [ROS telepítése (eng)](http://wiki.ros.org/melodic/Installation/Ubuntu)
+- [ROS installation (eng)](http://wiki.ros.org/melodic/Installation/Ubuntu)
 - [ETH Zürich - Programming for Robotics (ROS)](https://www.youtube.com/watch?v=0BxVPCInS3M&list=PLE-BQwvVGf8HOvwXPgtDfWoxd4Cc6ghiP)
 - [edX - Hello (Real) World with ROS](https://www.edx.org/course/hello-real-world-with-ros-robot-operating-system)
 - [ROS.org tutorials](http://wiki.ros.org/ROS/Tutorials)
@@ -130,12 +130,7 @@ hide:
  <li><a href="https://ethz.ch/content/dam/ethz/special-interest/mavt/robotics-n-intelligent-systems/rsl-dam/ROS2021/lec2/Exercise%20Session%202.pdf" target="_blank" class="eth-link">Exercises (PDF, 219 KB)</a><br> </li> 
  <li>Files: <a href="https://ethz.ch/content/dam/ethz/special-interest/mavt/robotics-n-intelligent-systems/rsl-dam/ROS2021/lec2/smb_highlevel_controller.zip" target="_blank" class="eth-link">smb_highlevel_controller.zip (ZIP, 3 KB)</a></li> 
  <li><a href="https://youtu.be/v9RgXcosuww" class="eth-link">Video Recording</a></li> 
-</ul></td></tr><tr><td id="t-8b934858-0cb0-47c2-b668-3493c2cf3726-tbody-row-2-cell-0" headers="t-8b934858-0cb0-47c2-b668-3493c2cf3726-thead-row-0-cell-0">26.02.</td><td id="t-8b934858-0cb0-47c2-b668-3493c2cf3726-tbody-row-2-cell-1" headers="t-8b934858-0cb0-47c2-b668-3493c2cf3726-thead-row-0-cell-1"><ul> 
- <li>TF Transformation System</li> 
- <li>rqt User Interface</li> 
- <li>Robot models (URDF)</li> 
- <li>Simulation descriptions (SDF)</li> 
-</ul></td><td id="t-8b934858-0cb0-47c2-b668-3493c2cf3726-tbody-row-2-cell-2" headers="t-8b934858-0cb0-47c2-b668-3493c2cf3726-thead-row-0-cell-2"><ul> 
+</ul></td></tr><tr><td id="t-8b934858-0cb0-47c2-b668-3493c2cf3726-tbody-row-2-cell-0" headers="t-8b934858-0cb0-47c2-b668-3493c2cf3726-thead-row-0-cell-2"><ul> 
  <li><a href="https://ethz.ch/content/dam/ethz/special-interest/mavt/robotics-n-intelligent-systems/rsl-dam/ROS2021/lec3/ROS%20Course%20Slides%20Course%203.pdf" target="_blank" class="eth-link">Lecture Slides (PDF, 2 MB)</a></li> 
  <li><a href="https://ethz.ch/content/dam/ethz/special-interest/mavt/robotics-n-intelligent-systems/rsl-dam/ROS2021/lec3/Exercise%20Session%203.pdf" target="_blank" class="eth-link">Exercises (PDF, 170 KB)</a></li> 
  <li>Files: <a href="https://ethz.ch/content/dam/ethz/special-interest/mavt/robotics-n-intelligent-systems/rsl-dam/ROS2021/lec3/smb_common_v2.zip" target="_blank" class="eth-link">smb_common_v2.zip (ZIP, 2.3 MB)</a></li> 
@@ -182,7 +177,6 @@ hide:
 <ul> 
  <li><a href="https://vimeo.com/187696096" class="eth-link">ANYmal at the ARGOS Challenge</a>&nbsp;<a href="https://www.researchgate.net/publication/308953021_ANYmal_at_the_ARGOS_Challenge_-_Tools_and_Experiences_from_the_Autonomous_Inspection_of_Oil_Gas_Sites_with_a_Legged_Robot" class="eth-link">slides</a></li> 
 </ul></td></tr></tbody> <!----></table>
-
 
 ### University of Bonn
 
@@ -274,3 +268,4 @@ ROS 2
 - VS code és ROS 2 ajánlott beállítások: [picknik.ai/vscode/docker/ros2/2024/01/23/ROS2-and-VSCode.html](https://picknik.ai/vscode/docker/ros2/2024/01/23/ROS2-and-VSCode.html)
 - ROS felhasználók a világban: [metrorobots.com/rosmap.html](http://metrorobots.com/rosmap.html)
 - Colcon cheatsheet: [github.com/ubuntu-robotics/ros2_cheats_sheet/blob/master/colcon%2Fcolcon_cheats_sheet.pdf](https://github.com/ubuntu-robotics/ros2_cheats_sheet/blob/master/colcon%2Fcolcon_cheats_sheet.pdf)
+- IEEE robots guide [robotsguide.com/robots](https://robotsguide.com/robots/?category=autonomous-vehicles&sort=name)

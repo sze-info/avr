@@ -34,10 +34,22 @@ A big thank you goes to the following people/groups:
 ## Commands
 
 ``` r
-$ git clone https://github.com/sze-info/ajr/ && cd ajr
+$ git clone https://github.com/sze-info/avr/ && cd avr
 $ pip install mkdocs mkdocs-material "mkdocs-material[imaging]"
 $ mkdocs build
 $ mkdocs serve
+```
+## Note
+If you encounter the error `zsh: command not found: mkdocs` after installing `mkdocs-material`, it might be because the installation directory is not in your PATH. You can fix this by adding the following line to your shell configuration file (`.zshrc` for Zsh or `.bashrc` for Bash):
+
+```sh
+export PATH=$PATH:~/.local/bin
+```
+### After adding this line, reload your shell configuration:
+
+```sh 
+source ~/.zshrc  # For Zsh
+source ~/.bashrc  # For Bash
 ```
 
 ## MkDocs License
