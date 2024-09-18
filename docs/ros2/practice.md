@@ -1,7 +1,9 @@
+---
 layout: default
 title: Practice - ROS 2 Basics
 parent: Introduction
-icon: material/code-braces-box # practical material
+icon: material/code-braces-box # gyakorlati tananyag
+
 ---
 
 # `ROS 2` Introduction and Practice
@@ -117,8 +119,11 @@ The `colcon build` command comes with several useful switches:
 
 ### Source
 To actually run our ROS2 executable files, we need to set up the environment (so-called sourcing), i.e., tell the bash where to look for the executable files, what their dependencies are, etc. This is simpler than it sounds, just issue a `source <path>/<name>.bash` command. As mentioned earlier, the workspace name doesn't matter, and indeed, after sourcing, it doesn't matter where the executable is physically located; it can be conveniently run from any folder with a command. Since packages within different workspaces can build on each other, ROS2 introduced the overlay/underlay concept. This means that when building one workspace, another workspace was already sourced, and some package depends on the previously built package. Thus, its functionality, code is needed for the dependent package. Accordingly, sourcing can also be of two types:
--The `local_setup.bash` script sets up the environment (sources) only in the current workspace. So it does not source the parent (dependent) workspace.
+
+- The `local_setup.bash` script sets up the environment (sources) only in the current workspace. So it does not source the parent (dependent) workspace.
+
 - The `local_setup.bash`script sets up the environment (sources) only in the current workspace. So it does not source the parent (dependent) workspace.
+  
 - The `setup.bash` script, however, adds the `local_setup.bash` script to all workspaces that were dependencies when the workspace was created.
 
-!!! note In this course, such complex systems are not needed; most of the time, a single `ros2_ws` is sufficient
+!!! note In this course, such complex systems are not needed; most of the time, a single `ros2_ws` is sufficient.
