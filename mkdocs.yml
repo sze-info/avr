@@ -19,6 +19,8 @@ nav:
     - 2. ROS 2 concepts and install: 
       - ros2/README.md
       - ros2/practice.md
+      - ros2/ubuntu.md
+      - ros2/windows_subsystem.md
     - 3. Sensing: 
       - sensing/README.md
       - sensing/practice.md
