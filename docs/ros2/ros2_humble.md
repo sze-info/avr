@@ -125,7 +125,7 @@ Details:[docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Colcon-Tutor
 
 # Windows /installation
 
-In the terminal[következő `install_humble.sh`](https://github.com/sze-info/arj/blob/main/docs/telepites/install_humble.sh)
+[In the terminal `install_humble.sh`](https://github.com/sze-info/arj/blob/main/docs/telepites/install_humble.sh)
 
 ``` bash
 wget https://raw.githubusercontent.com/sze-info/arj/main/docs/telepites/install_humble.sh
