@@ -21,6 +21,8 @@ nav:
       - ros2/practice.md
       - ros2/ubuntu.md
       - ros2/windows_subsystem.md
+      - ros2/vscodegit.md
+      - ros2/ros2_humble.md
     - 3. Sensing: 
       - sensing/README.md
       - sensing/practice.md
