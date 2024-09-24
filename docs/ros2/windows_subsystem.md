@@ -30,7 +30,7 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 wsl --install --no-distribution
 ```
 4. Powershell, import WSL Snapshot file (tar):
- ``` powershell
+``` powershell
 wsl --import ajr1 .\ajr1\ .\ajr24a.tar
 ```
 5. Install VS Code and WSL extension:
