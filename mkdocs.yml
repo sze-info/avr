@@ -52,9 +52,9 @@ nav:
       - safety/practice.md
 
   - Assignments:
-    - feleves_beadando/README.md
-    - feleves_beadando/kisbeadando.md
-    - feleves_beadando/nagyfeleves.md
+    - assignments/README.md
+    - assignments/small_assignment.md
+    - assignments/semester_project.md
   - Self-paced:
     - ros2halado/py_cpp.md    
     - onallo/ros2git.md
