@@ -41,7 +41,7 @@ Instructors | | | .
 
 </center>
 
-In the fall semester of 2023/24, classes will be held in room `A2` and the computer lab `C100`.
+In the fall semester of 2023/24, classes will be held in room `A2` and the computer lab `B6`.
 
 ## Theory
 
