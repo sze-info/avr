@@ -28,13 +28,21 @@ nav:
       - sensing/practice.md
     - 4. ROS 2 advanced: 
       - ros2advanced/README.md
-      - ros2advanced/practice.md      
+      - ros2advanced/ros2launch.md
+      - ros2advanced/projects.md
+      - ros2advanced/smallassignment.md
+      - ros2advanced/semesterproject.md      
     - 5. Transformations: 
       - transformations/README.md
       - transformations/practice.md
     - 6. Perception:
       - perception/README.md
       - perception/practice.md
+      - perception/practice_cluster.md
+      - perception/ground_filter.md
+      - perception/road_filter.md
+      - perception/slam.md
+      
     - 7. Simulation:
       - simulation/README.md
       - simulation/practice.md
