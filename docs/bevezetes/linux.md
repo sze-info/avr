@@ -16,7 +16,7 @@ icon: material/code-block-tags # kiegészítő tananyag
 A leírásban alapvető Linux ismeretek találhatók. 
 
 
-![](https://raw.githubusercontent.com/sze-info/arj/main/docs/_images/overview16.svg)
+![](https://raw.githubusercontent.com/sze-info/arj/main/docs/_images/overview26.svg)
 
 Linuxban (ebben a leírásban értsd  Ubuntu, Raspbian) a legtöbb munkamenetet lehetséges, vagy épp célszerű terminálból végrehajtani.
 Ez a tutorial segít a linux terminál alapjainak megismertetésében.
