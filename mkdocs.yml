@@ -46,6 +46,8 @@ nav:
     - 7. Simulation:
       - simulation/README.md
       - simulation/practice.md
+      - simulation/gazebo_fortress.md
+      - simulation/f1tenth_sim_a.md
     - 8. Planning:
       - planning/README.md
       - planning/practice.md
