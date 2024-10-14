@@ -8,7 +8,7 @@ icon: material/math-integral-box # theoretical material
 
 Sensing refers to the reading of raw data.
 
-![](https://raw.githubusercontent.com/sze-info/arj/main/docs/_images/overview10.svg)
+![](https://raw.githubusercontent.com/sze-info/arj/main/docs/_images/overview20.svg)
 
 In the case of sensing, it is important to note that this does not yet mean high-level data processing. Sensors can include cameras, microphones, LIDARs, etc. As the figure shows, in the material, we discuss sensing together with actuation.
 

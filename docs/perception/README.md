@@ -8,7 +8,7 @@ icon: material/math-integral-box # theoretical material
 
 Perception is the extraction of information from raw sensory data.
 
-![](https://raw.githubusercontent.com/sze-info/arj/main/docs/_images/overview11.svg)
+![](https://raw.githubusercontent.com/sze-info/arj/main/docs/_images/overview21.svg)
 
 The goals of perception can include:
 

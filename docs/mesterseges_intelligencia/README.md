@@ -13,7 +13,7 @@ icon: material/math-integral-box # elméleti tananyag
 
 Az AI az észlelés mellett akár a tervezésnél vagy a szabályozásnál is megjelenhet.
 
-![](https://raw.githubusercontent.com/sze-info/arj/main/docs/_images/overview15.svg)
+![](https://raw.githubusercontent.com/sze-info/arj/main/docs/_images/overview25.svg)
 
 
 Bár legfontosabb autonóm alkamazási köre az észlelés, ahogy a fenti ábrán is látszik: tervezési illetve szabályozási felhasználása is van.

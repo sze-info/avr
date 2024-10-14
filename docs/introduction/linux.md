@@ -10,7 +10,7 @@ icon: material/code-block-tags # supplementary material
 
 The description contains basic Linux knowledge.
 
-![](https://raw.githubusercontent.com/sze-info/arj/main/docs/_images/overview16.svg)
+![](https://raw.githubusercontent.com/sze-info/arj/main/docs/_images/overview26.svg)
 
 In Linux (in this description, understand Ubuntu, Raspbian), most sessions can or should be executed from the terminal.
 This tutorial helps to get acquainted with the basics of the Linux terminal.

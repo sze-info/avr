@@ -12,7 +12,8 @@ icon: material/math-integral-box # theoretical material
 Systemically, autonomous driving can be described as the sum of the following sub-functions:
 
 
-[![](https://raw.githubusercontent.com/sze-info/arj/main/docs/_images/overview01.svg)](https://raw.githubusercontent.com/sze-info/arj/main/docs/_images/overview02.svg)
+[![](https://raw.githubusercontent.com/sze-info/arj/main/docs/_images/overview02.svg)](https://raw.githubusercontent.com/sze-info/arj/main/docs/_images/overview02.svg)
+
 Literature: [[TU München](https://github.com/TUMFTM/Lecture_ADSE)], [[Autoware](https://github.com/autowarefoundation/autoware)], [[University of Texas at Dallas](https://nova-utd.github.io/navigator/system-overview.html)], [[ApolloAuto](https://github.com/ApolloAuto/apollo/blob/master/docs/02_Quick%20Start/demo_guide/images/Apollo_3_5_software_architecture.png)]
 
 1. **Sensing**: deals with the production of raw data at the driver-program level, for example, producing an image from a camera sensor for the system.
@@ -88,6 +89,9 @@ xychart-beta
     x-axis ["Avg. iPhone app","World of warcraft", "Linux kernel", Facebook, "Avg. new vehicle"]
     y-axis "Average number of lines of codes (million)" 0 --> 210
     bar [0.04, 5.5, 30, 62, 200]
+
+```
+
 Source: [statista](https://www.statista.com/statistics/1370978/automotive-software-average-lines-of-codes-per-vehicle-globally/#:~:text=Between%202015%20and%202020%2C%20the,production%20in%20the%20following%20years.), [informationisbeautiful](https://informationisbeautiful.net/visualizations/million-lines-of-code/)
 # University Vehicles
 
