@@ -8,7 +8,7 @@ icon: material/math-integral-box # theoretical material
 
 During simulation, we study the expected behavior of the system using a computer model.
 
-![](https://raw.githubusercontent.com/sze-info/arj/main/docs/_images/overview12.svg)
+![](https://raw.githubusercontent.com/sze-info/arj/main/docs/_images/overview22.svg)
 
 The essence of simulation is that we **do not** start testing our initial, possibly untested program code in the real world on our self-driving car/robot. This can have obvious disadvantages. However, it is important to note that the simulator always simulates a simplified model of reality, so code that works well in the simulator may not always work perfectly in real life.
 
