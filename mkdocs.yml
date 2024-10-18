@@ -53,7 +53,7 @@ nav:
       - planning/practice.md
     - 9. Control:
       - control/README.md
-      - control/practice.md
+      - control/ros2practice.md
     - 10. AI (artificial intelligence):
       - ai/README.md
       - ai/practice.md
