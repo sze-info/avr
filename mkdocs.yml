@@ -67,10 +67,10 @@ nav:
     - assignments/semester_project.md
   - Self-paced:
     - ros2halado/py_cpp.md    
-    - onallo/ros2git.md
-    - onallo/linux.md
-    - onallo/ros2launchmarker.md
-    - onallo/mermaid.md
+    - self_paced/ros2git.md
+    - self_paced/linux.md
+    - self_paced/ros2launchmarker.md
+    - self_paced/mermaid.md
     - ros2halado/rqt.md    
     - ros2halado/qos.md    
     - ros2halado/mcap.md    

@@ -1,5 +1,5 @@
 ---
-title: Python és C++ összehasonlítása
+title: Comparison of Python and C++
 ---
 
 === "Python"
@@ -79,4 +79,3 @@ title: Python és C++ összehasonlítása
 
     }
     ```
-

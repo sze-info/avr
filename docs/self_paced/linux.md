@@ -1,26 +1,21 @@
 ---
 layout: default
 title: Linux
-parent: Önálló feladatok
+parent: Self-paced Tasks
 ---
 
- 
+# Linux Practice
 
+## Creating Directory Structure - Terminal
 
-
-
-# Linux gyakorlás
-
-## Mapparendszer létrehozása - terminal
-
-A feladathoz telepítsük a `tree` parancsot: 
+To complete this task, install the `tree` command:
 ```
 sudo apt install tree
 ```
 
-A feladathoz megoldásához `touch`, `chmod`, `mkdir` parancsok kellenek. 
+You will need the `touch`, `chmod`, and `mkdir` commands to complete this task.
 
-Hozzuk létre a következő mapparendszert, ami a `cd ~ && tree tmp_dir/` parancsra a következőképp néz ki:
+Create the following directory structure, which should look like this when you run `cd ~ && tree tmp_dir/`:
 
 ```
 ~/tmp_dir/
@@ -43,7 +38,7 @@ Hozzuk létre a következő mapparendszert, ami a `cd ~ && tree tmp_dir/` paranc
 13 directories, 3 files
 ```
 
-Az `ls -l  ~/tmp_dir/` parancsra pedig a következőhöz hasonló `rwx` értékeket mutatja:
+The `ls -l  ~/tmp_dir/` command should show `rwx` values similar to the following:
 
 ```
 drwxr-xr-x 4 he he 4096 Feb 17 14:54 animals
@@ -53,9 +48,7 @@ drwxr-xr-x 5 he he 4096 Feb 17 14:55 colors
 drwxr-xr-x 3 he he 4096 Feb 17 14:43 top
 ```
 
-
-
-### Megoldás segédlet
+### Solution Guide
 
 ```
 mkdir -p top/middle/bottom
@@ -63,23 +56,21 @@ mkdir -p colors/{red,green,blue}
 mkdir -p animals/{cat,dog/{vizsla,puli,komondor}}
 ```
 
-## Szöveges fájlok
+## Text Files
 
-Ha még nem hozuk létre, akkor készítsünk egy `~/tmp_text/` mappát.
+If not already created, create a `~/tmp_text/` directory.
 
-A mappán belül készítsünk egy `hello.py` fájlt, majd terminálból töltsük fel a következő tartalommal:
+Inside the directory, create a `hello.py` file and populate it with the following content from the terminal:
 
 ``` python
 import sys
 print('\nHello vilag!\nA verzio pedig:\n' + sys.version)
 ```
+Make it executable and run it.
 
-Tegyük futtathatóvá és futtassuk.
+### Solution Guide
 
-
-### Megoldás segédlet
-
-``` python
-echo "import sys" >> hello.py
-echo "print('\nHello vilag!\nA verzio pedig:\n' + sys.version)" >> hello.py
+```bash
+chmod +x hello.py
+./hello.py
 ```
