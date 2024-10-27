@@ -1,0 +1,3321 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A course at Széchenyi István University, Győr, Hungary">
+      
+      
+        <meta name="author" content="sze">
+      
+      
+        <link rel="canonical" href="https://sze-info.github.io/avr/control/">
+      
+      
+        <link rel="prev" href="../planning/practice/">
+      
+      
+        <link rel="next" href="ros2practice/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
+    
+    
+      
+        <title>Theory - Control - Autonomous vehicles and robots software engineering</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Theory - Control - Autonomous vehicles and robots software engineering" >
+      
+        <meta  property="og:description"  content="A course at Széchenyi István University, Győr, Hungary" >
+      
+        <meta  property="og:image"  content="https://sze-info.github.io/avr/assets/images/social/control/README.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://sze-info.github.io/avr/control/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Theory - Control - Autonomous vehicles and robots software engineering" >
+      
+        <meta  name="twitter:description"  content="A course at Széchenyi István University, Győr, Hungary" >
+      
+        <meta  name="twitter:image"  content="https://sze-info.github.io/avr/assets/images/social/control/README.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="youtube" data-md-color-primary="custom" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#control" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Autonomous vehicles and robots software engineering" class="md-header__button md-logo" aria-label="Autonomous vehicles and robots software engineering" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M1 14V5h12c5.5 0 10 4.5 10 10v2h-2.17A2.99 2.99 0 0 1 18 19a2.99 2.99 0 0 1-2.83-2H10a5.002 5.002 0 0 1-9-3m5-3c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3m9-1v2h5.25c-.33-.73-.75-1.4-1.25-2z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Autonomous vehicles and robots software engineering
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Theory - Control
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="youtube" data-md-color-primary="custom" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="https://sze-info.github.io/ajr/" hreflang="hu" class="md-select__link">
+              Magyar
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://sze-info.github.io/avr/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/sze-info/avr/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+    
+  
+  Start
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../introduction/" class="md-tabs__link">
+          
+  
+  Curriculum
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../assignments/" class="md-tabs__link">
+          
+  
+  Assignments
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../ros2halado/py_cpp/" class="md-tabs__link">
+          
+  
+  Self-paced
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../links/" class="md-tabs__link">
+          
+  
+  Links
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://szelearning.sze.hu/course/view.php?id=13973" class="md-tabs__link">
+        
+  
+    
+  
+  Moodle
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Autonomous vehicles and robots software engineering" class="md-nav__button md-logo" aria-label="Autonomous vehicles and robots software engineering" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M1 14V5h12c5.5 0 10 4.5 10 10v2h-2.17A2.99 2.99 0 0 1 18 19a2.99 2.99 0 0 1-2.83-2H10a5.002 5.002 0 0 1-9-3m5-3c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3m9-1v2h5.25c-.33-.73-.75-1.4-1.25-2z"/></svg>
+
+    </a>
+    Autonomous vehicles and robots software engineering
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/sze-info/avr/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Start
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Curriculum
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Curriculum
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    1. Introduction
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            1. Introduction
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduction/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-3.1 3.9s-.7-.3-1-.3c-.6-.1-1 .1-1.2 1.1L12 16.8c-.2.8-.5 1.4-1 1.8-.4.3-.8.4-1.3.4-.8 0-2-.5-2-.5l.5-1.4s.8.3 1 .3c.3.1.5 0 .7-.1s.3-.4.4-.7l1.6-9.2c.1-.8.5-1.4 1-1.9.6-.4 1.3-.5 2.1-.4.7.1 1.5.5 1.5.5z"/></svg>
+  
+  <span class="md-ellipsis">
+    Theory - Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduction/practice/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-8 5H9v2c0 1.1-.9 2-2 2 1.1 0 2 .9 2 2v2h2v2H9c-1.1 0-2-.9-2-2v-1c0-1.1-.9-2-2-2v-2c1.1 0 2-.9 2-2V8c0-1.1.9-2 2-2h2zm8 5c-1.1 0-2 .9-2 2v1c0 1.1-.9 2-2 2h-2v-2h2v-2c0-1.1.9-2 2-2-1.1 0-2-.9-2-2V8h-2V6h2c1.1 0 2 .9 2 2v1c0 1.1.9 2 2 2z"/></svg>
+  
+  <span class="md-ellipsis">
+    Practice
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduction/windows/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.59 3.41 7 4.82 3.82 8 7 11.18 5.59 12.6 1 8zm5.82 0L16 8l-4.59 4.6L10 11.18 13.18 8 10 4.82zM22 6v12c0 1.11-.89 2-2 2H4a2 2 0 0 1-2-2v-4h2v4h16V6h-2.97V4H20c1.11 0 2 .89 2 2"/></svg>
+  
+  <span class="md-ellipsis">
+    Windows
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduction/copilot/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.59 3.41 7 4.82 3.82 8 7 11.18 5.59 12.6 1 8zm5.82 0L16 8l-4.59 4.6L10 11.18 13.18 8 10 4.82zM22 6v12c0 1.11-.89 2-2 2H4a2 2 0 0 1-2-2v-4h2v4h16V6h-2.97V4H20c1.11 0 2 .89 2 2"/></svg>
+  
+  <span class="md-ellipsis">
+    GitHub Copilot
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduction/linux/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.59 3.41 7 4.82 3.82 8 7 11.18 5.59 12.6 1 8zm5.82 0L16 8l-4.59 4.6L10 11.18 13.18 8 10 4.82zM22 6v12c0 1.11-.89 2-2 2H4a2 2 0 0 1-2-2v-4h2v4h16V6h-2.97V4H20c1.11 0 2 .89 2 2"/></svg>
+  
+  <span class="md-ellipsis">
+    Linux and Git
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2. ROS 2 concepts and install
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            2. ROS 2 concepts and install
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ros2/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-3.1 3.9s-.7-.3-1-.3c-.6-.1-1 .1-1.2 1.1L12 16.8c-.2.8-.5 1.4-1 1.8-.4.3-.8.4-1.3.4-.8 0-2-.5-2-.5l.5-1.4s.8.3 1 .3c.3.1.5 0 .7-.1s.3-.4.4-.7l1.6-9.2c.1-.8.5-1.4 1-1.9.6-.4 1.3-.5 2.1-.4.7.1 1.5.5 1.5.5z"/></svg>
+  
+  <span class="md-ellipsis">
+    Theory - ROS 2 Basics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ros2/practice/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-8 5H9v2c0 1.1-.9 2-2 2 1.1 0 2 .9 2 2v2h2v2H9c-1.1 0-2-.9-2-2v-1c0-1.1-.9-2-2-2v-2c1.1 0 2-.9 2-2V8c0-1.1.9-2 2-2h2zm8 5c-1.1 0-2 .9-2 2v1c0 1.1-.9 2-2 2h-2v-2h2v-2c0-1.1.9-2 2-2-1.1 0-2-.9-2-2V8h-2V6h2c1.1 0 2 .9 2 2v1c0 1.1.9 2 2 2z"/></svg>
+  
+  <span class="md-ellipsis">
+    Practice - ROS 2 Basics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ros2/ubuntu/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.59 3.41 7 4.82 3.82 8 7 11.18 5.59 12.6 1 8zm5.82 0L16 8l-4.59 4.6L10 11.18 13.18 8 10 4.82zM22 6v12c0 1.11-.89 2-2 2H4a2 2 0 0 1-2-2v-4h2v4h16V6h-2.97V4H20c1.11 0 2 .89 2 2"/></svg>
+  
+  <span class="md-ellipsis">
+    Ubuntu dual boot
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ros2/windows_subsystem/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.59 3.41 7 4.82 3.82 8 7 11.18 5.59 12.6 1 8zm5.82 0L16 8l-4.59 4.6L10 11.18 13.18 8 10 4.82zM22 6v12c0 1.11-.89 2-2 2H4a2 2 0 0 1-2-2v-4h2v4h16V6h-2.97V4H20c1.11 0 2 .89 2 2"/></svg>
+  
+  <span class="md-ellipsis">
+    Windows WSL2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ros2/vscodegit/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.59 3.41 7 4.82 3.82 8 7 11.18 5.59 12.6 1 8zm5.82 0L16 8l-4.59 4.6L10 11.18 13.18 8 10 4.82zM22 6v12c0 1.11-.89 2-2 2H4a2 2 0 0 1-2-2v-4h2v4h16V6h-2.97V4H20c1.11 0 2 .89 2 2"/></svg>
+  
+  <span class="md-ellipsis">
+    VS code, git
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ros2/ros2_humble/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.59 3.41 7 4.82 3.82 8 7 11.18 5.59 12.6 1 8zm5.82 0L16 8l-4.59 4.6L10 11.18 13.18 8 10 4.82zM22 6v12c0 1.11-.89 2-2 2H4a2 2 0 0 1-2-2v-4h2v4h16V6h-2.97V4H20c1.11 0 2 .89 2 2"/></svg>
+  
+  <span class="md-ellipsis">
+    Installing ROS 2 Humble
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    3. Sensing
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            3. Sensing
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sensing/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-3.1 3.9s-.7-.3-1-.3c-.6-.1-1 .1-1.2 1.1L12 16.8c-.2.8-.5 1.4-1 1.8-.4.3-.8.4-1.3.4-.8 0-2-.5-2-.5l.5-1.4s.8.3 1 .3c.3.1.5 0 .7-.1s.3-.4.4-.7l1.6-9.2c.1-.8.5-1.4 1-1.9.6-.4 1.3-.5 2.1-.4.7.1 1.5.5 1.5.5z"/></svg>
+  
+  <span class="md-ellipsis">
+    Theory - Sensing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sensing/practice/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-8 5H9v2c0 1.1-.9 2-2 2 1.1 0 2 .9 2 2v2h2v2H9c-1.1 0-2-.9-2-2v-1c0-1.1-.9-2-2-2v-2c1.1 0 2-.9 2-2V8c0-1.1.9-2 2-2h2zm8 5c-1.1 0-2 .9-2 2v1c0 1.1-.9 2-2 2h-2v-2h2v-2c0-1.1.9-2 2-2-1.1 0-2-.9-2-2V8h-2V6h2c1.1 0 2 .9 2 2v1c0 1.1.9 2 2 2z"/></svg>
+  
+  <span class="md-ellipsis">
+    Practice - Sensing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    4. ROS 2 advanced
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            4. ROS 2 advanced
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ros2advanced/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-3.1 3.9s-.7-.3-1-.3c-.6-.1-1 .1-1.2 1.1L12 16.8c-.2.8-.5 1.4-1 1.8-.4.3-.8.4-1.3.4-.8 0-2-.5-2-.5l.5-1.4s.8.3 1 .3c.3.1.5 0 .7-.1s.3-.4.4-.7l1.6-9.2c.1-.8.5-1.4 1-1.9.6-.4 1.3-.5 2.1-.4.7.1 1.5.5 1.5.5z"/></svg>
+  
+  <span class="md-ellipsis">
+    Theory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ros2advanced/ros2launch/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.59 3.41 7 4.82 3.82 8 7 11.18 5.59 12.6 1 8zm5.82 0L16 8l-4.59 4.6L10 11.18 13.18 8 10 4.82zM22 6v12c0 1.11-.89 2-2 2H4a2 2 0 0 1-2-2v-4h2v4h16V6h-2.97V4H20c1.11 0 2 .89 2 2"/></svg>
+  
+  <span class="md-ellipsis">
+    ROS 2 launch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ros2advanced/projects/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+  
+  <span class="md-ellipsis">
+    Small Assignment and Large Semester Project
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ros2advanced/smallassignment/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 19.88V22l-1.8-1.17-4.79-9c.66-.21 1.26-.55 1.78-1zM15 7a3 3 0 0 1-3 3h-.44L5.8 20.83 4 22v-2.12L9.79 9c-1.1-1.23-1-3.13.24-4.24C10.57 4.28 11.27 4 12 4V2a1 1 0 0 1 1 1v1.18c1.2.42 2 1.55 2 2.82m-2 0a1 1 0 0 0-1-1 1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1"/></svg>
+  
+  <span class="md-ellipsis">
+    Small Assignment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ros2advanced/semesterproject/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+  
+  <span class="md-ellipsis">
+    Semester Project
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    5. Transformations
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            5. Transformations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transformations/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-3.1 3.9s-.7-.3-1-.3c-.6-.1-1 .1-1.2 1.1L12 16.8c-.2.8-.5 1.4-1 1.8-.4.3-.8.4-1.3.4-.8 0-2-.5-2-.5l.5-1.4s.8.3 1 .3c.3.1.5 0 .7-.1s.3-.4.4-.7l1.6-9.2c.1-.8.5-1.4 1-1.9.6-.4 1.3-.5 2.1-.4.7.1 1.5.5 1.5.5z"/></svg>
+  
+  <span class="md-ellipsis">
+    Theory - Transformations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transformations/practice/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-8 5H9v2c0 1.1-.9 2-2 2 1.1 0 2 .9 2 2v2h2v2H9c-1.1 0-2-.9-2-2v-1c0-1.1-.9-2-2-2v-2c1.1 0 2-.9 2-2V8c0-1.1.9-2 2-2h2zm8 5c-1.1 0-2 .9-2 2v1c0 1.1-.9 2-2 2h-2v-2h2v-2c0-1.1.9-2 2-2-1.1 0-2-.9-2-2V8h-2V6h2c1.1 0 2 .9 2 2v1c0 1.1.9 2 2 2z"/></svg>
+  
+  <span class="md-ellipsis">
+    Practice - Transformations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    6. Perception
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            6. Perception
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../perception/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-3.1 3.9s-.7-.3-1-.3c-.6-.1-1 .1-1.2 1.1L12 16.8c-.2.8-.5 1.4-1 1.8-.4.3-.8.4-1.3.4-.8 0-2-.5-2-.5l.5-1.4s.8.3 1 .3c.3.1.5 0 .7-.1s.3-.4.4-.7l1.6-9.2c.1-.8.5-1.4 1-1.9.6-.4 1.3-.5 2.1-.4.7.1 1.5.5 1.5.5z"/></svg>
+  
+  <span class="md-ellipsis">
+    Theory - Perception
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../perception/practice/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-8 5H9v2c0 1.1-.9 2-2 2 1.1 0 2 .9 2 2v2h2v2H9c-1.1 0-2-.9-2-2v-1c0-1.1-.9-2-2-2v-2c1.1 0 2-.9 2-2V8c0-1.1.9-2 2-2h2zm8 5c-1.1 0-2 .9-2 2v1c0 1.1-.9 2-2 2h-2v-2h2v-2c0-1.1.9-2 2-2-1.1 0-2-.9-2-2V8h-2V6h2c1.1 0 2 .9 2 2v1c0 1.1.9 2 2 2z"/></svg>
+  
+  <span class="md-ellipsis">
+    Practice
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../perception/practice_cluster/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-8 5H9v2c0 1.1-.9 2-2 2 1.1 0 2 .9 2 2v2h2v2H9c-1.1 0-2-.9-2-2v-1c0-1.1-.9-2-2-2v-2c1.1 0 2-.9 2-2V8c0-1.1.9-2 2-2h2zm8 5c-1.1 0-2 .9-2 2v1c0 1.1-.9 2-2 2h-2v-2h2v-2c0-1.1.9-2 2-2-1.1 0-2-.9-2-2V8h-2V6h2c1.1 0 2 .9 2 2v1c0 1.1.9 2 2 2z"/></svg>
+  
+  <span class="md-ellipsis">
+    Practice B - Perception
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../perception/ground_filter/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.59 3.41 7 4.82 3.82 8 7 11.18 5.59 12.6 1 8zm5.82 0L16 8l-4.59 4.6L10 11.18 13.18 8 10 4.82zM22 6v12c0 1.11-.89 2-2 2H4a2 2 0 0 1-2-2v-4h2v4h16V6h-2.97V4H20c1.11 0 2 .89 2 2"/></svg>
+  
+  <span class="md-ellipsis">
+    Ground filter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../perception/road_filter/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.59 3.41 7 4.82 3.82 8 7 11.18 5.59 12.6 1 8zm5.82 0L16 8l-4.59 4.6L10 11.18 13.18 8 10 4.82zM22 6v12c0 1.11-.89 2-2 2H4a2 2 0 0 1-2-2v-4h2v4h16V6h-2.97V4H20c1.11 0 2 .89 2 2"/></svg>
+  
+  <span class="md-ellipsis">
+    Road filter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../perception/slam/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.59 3.41 7 4.82 3.82 8 7 11.18 5.59 12.6 1 8zm5.82 0L16 8l-4.59 4.6L10 11.18 13.18 8 10 4.82zM22 6v12c0 1.11-.89 2-2 2H4a2 2 0 0 1-2-2v-4h2v4h16V6h-2.97V4H20c1.11 0 2 .89 2 2"/></svg>
+  
+  <span class="md-ellipsis">
+    SLAM and LOAM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    7. Simulation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            7. Simulation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../simulation/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-3.1 3.9s-.7-.3-1-.3c-.6-.1-1 .1-1.2 1.1L12 16.8c-.2.8-.5 1.4-1 1.8-.4.3-.8.4-1.3.4-.8 0-2-.5-2-.5l.5-1.4s.8.3 1 .3c.3.1.5 0 .7-.1s.3-.4.4-.7l1.6-9.2c.1-.8.5-1.4 1-1.9.6-.4 1.3-.5 2.1-.4.7.1 1.5.5 1.5.5z"/></svg>
+  
+  <span class="md-ellipsis">
+    Theory - Simulation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../simulation/practice/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-8 5H9v2c0 1.1-.9 2-2 2 1.1 0 2 .9 2 2v2h2v2H9c-1.1 0-2-.9-2-2v-1c0-1.1-.9-2-2-2v-2c1.1 0 2-.9 2-2V8c0-1.1.9-2 2-2h2zm8 5c-1.1 0-2 .9-2 2v1c0 1.1-.9 2-2 2h-2v-2h2v-2c0-1.1.9-2 2-2-1.1 0-2-.9-2-2V8h-2V6h2c1.1 0 2 .9 2 2v1c0 1.1.9 2 2 2z"/></svg>
+  
+  <span class="md-ellipsis">
+    Practice - Creating Your Own Robot Simulation in Gazebo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../simulation/gazebo_fortress/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-8 5H9v2c0 1.1-.9 2-2 2 1.1 0 2 .9 2 2v2h2v2H9c-1.1 0-2-.9-2-2v-1c0-1.1-.9-2-2-2v-2c1.1 0 2-.9 2-2V8c0-1.1.9-2 2-2h2zm8 5c-1.1 0-2 .9-2 2v1c0 1.1-.9 2-2 2h-2v-2h2v-2c0-1.1.9-2 2-2-1.1 0-2-.9-2-2V8h-2V6h2c1.1 0 2 .9 2 2v1c0 1.1.9 2 2 2z"/></svg>
+  
+  <span class="md-ellipsis">
+    Gyakorlat - Gazebo Fortress ROS 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../simulation/f1tenth_sim_a/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.59 3.41 7 4.82 3.82 8 7 11.18 5.59 12.6 1 8zm5.82 0L16 8l-4.59 4.6L10 11.18 13.18 8 10 4.82zM22 6v12c0 1.11-.89 2-2 2H4a2 2 0 0 1-2-2v-4h2v4h16V6h-2.97V4H20c1.11 0 2 .89 2 2"/></svg>
+  
+  <span class="md-ellipsis">
+    Gyakorlat - Gazebo Fortress ROS 2 Wheeltec
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    8. Planning
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            8. Planning
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../planning/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-3.1 3.9s-.7-.3-1-.3c-.6-.1-1 .1-1.2 1.1L12 16.8c-.2.8-.5 1.4-1 1.8-.4.3-.8.4-1.3.4-.8 0-2-.5-2-.5l.5-1.4s.8.3 1 .3c.3.1.5 0 .7-.1s.3-.4.4-.7l1.6-9.2c.1-.8.5-1.4 1-1.9.6-.4 1.3-.5 2.1-.4.7.1 1.5.5 1.5.5z"/></svg>
+  
+  <span class="md-ellipsis">
+    Theory - Planning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../planning/practice/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-8 5H9v2c0 1.1-.9 2-2 2 1.1 0 2 .9 2 2v2h2v2H9c-1.1 0-2-.9-2-2v-1c0-1.1-.9-2-2-2v-2c1.1 0 2-.9 2-2V8c0-1.1.9-2 2-2h2zm8 5c-1.1 0-2 .9-2 2v1c0 1.1-.9 2-2 2h-2v-2h2v-2c0-1.1.9-2 2-2-1.1 0-2-.9-2-2V8h-2V6h2c1.1 0 2 .9 2 2v1c0 1.1.9 2 2 2z"/></svg>
+  
+  <span class="md-ellipsis">
+    Practice - Planning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    9. Control
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_9">
+            <span class="md-nav__icon md-icon"></span>
+            9. Control
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-3.1 3.9s-.7-.3-1-.3c-.6-.1-1 .1-1.2 1.1L12 16.8c-.2.8-.5 1.4-1 1.8-.4.3-.8.4-1.3.4-.8 0-2-.5-2-.5l.5-1.4s.8.3 1 .3c.3.1.5 0 .7-.1s.3-.4.4-.7l1.6-9.2c.1-.8.5-1.4 1-1.9.6-.4 1.3-.5 2.1-.4.7.1 1.5.5 1.5.5z"/></svg>
+  
+  <span class="md-ellipsis">
+    Theory - Control
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-3.1 3.9s-.7-.3-1-.3c-.6-.1-1 .1-1.2 1.1L12 16.8c-.2.8-.5 1.4-1 1.8-.4.3-.8.4-1.3.4-.8 0-2-.5-2-.5l.5-1.4s.8.3 1 .3c.3.1.5 0 .7-.1s.3-.4.4-.7l1.6-9.2c.1-.8.5-1.4 1-1.9.6-.4 1.3-.5 2.1-.4.7.1 1.5.5 1.5.5z"/></svg>
+  
+  <span class="md-ellipsis">
+    Theory - Control
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-motivation-behind-closed-loop-control-introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Motivation behind closed-loop control - introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-architectural-overview-and-retrospective" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Architectural Overview and Retrospective
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-basics-of-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Basics of Control
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Basics of Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1. Definitions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-formulating-the-control-task" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2. Formulating the Control Task
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-example-of-control-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3. Example of Control Basics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-interactive-pid-tuning" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4 Interactive PID Tuning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-vehicle-control-solutions" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Vehicle Control Solutions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Vehicle Control Solutions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inverse-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inverse Models
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#predictive-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Predictive Models
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#closed-loop-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Closed-Loop Models
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommended-literature" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommended Literature
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#driver-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Driver Models
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ros2practice/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-8 5H9v2c0 1.1-.9 2-2 2 1.1 0 2 .9 2 2v2h2v2H9c-1.1 0-2-.9-2-2v-1c0-1.1-.9-2-2-2v-2c1.1 0 2-.9 2-2V8c0-1.1.9-2 2-2h2zm8 5c-1.1 0-2 .9-2 2v1c0 1.1-.9 2-2 2h-2v-2h2v-2c0-1.1.9-2 2-2-1.1 0-2-.9-2-2V8h-2V6h2c1.1 0 2 .9 2 2v1c0 1.1.9 2 2 2z"/></svg>
+  
+  <span class="md-ellipsis">
+    Practice - Control
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_10" id="__nav_2_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    10. AI (artificial intelligence)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10">
+            <span class="md-nav__icon md-icon"></span>
+            10. AI (artificial intelligence)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ai/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-3.1 3.9s-.7-.3-1-.3c-.6-.1-1 .1-1.2 1.1L12 16.8c-.2.8-.5 1.4-1 1.8-.4.3-.8.4-1.3.4-.8 0-2-.5-2-.5l.5-1.4s.8.3 1 .3c.3.1.5 0 .7-.1s.3-.4.4-.7l1.6-9.2c.1-.8.5-1.4 1-1.9.6-.4 1.3-.5 2.1-.4.7.1 1.5.5 1.5.5z"/></svg>
+  
+  <span class="md-ellipsis">
+    Theory - Artificial Intelligence
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ai/practice/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-8 5H9v2c0 1.1-.9 2-2 2 1.1 0 2 .9 2 2v2h2v2H9c-1.1 0-2-.9-2-2v-1c0-1.1-.9-2-2-2v-2c1.1 0 2-.9 2-2V8c0-1.1.9-2 2-2h2zm8 5c-1.1 0-2 .9-2 2v1c0 1.1-.9 2-2 2h-2v-2h2v-2c0-1.1.9-2 2-2-1.1 0-2-.9-2-2V8h-2V6h2c1.1 0 2 .9 2 2v1c0 1.1.9 2 2 2z"/></svg>
+  
+  <span class="md-ellipsis">
+    Practice - Artificial Intelligence
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_11" id="__nav_2_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    11. Safety V&V
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_11">
+            <span class="md-nav__icon md-icon"></span>
+            11. Safety V&V
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../safety/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-3.1 3.9s-.7-.3-1-.3c-.6-.1-1 .1-1.2 1.1L12 16.8c-.2.8-.5 1.4-1 1.8-.4.3-.8.4-1.3.4-.8 0-2-.5-2-.5l.5-1.4s.8.3 1 .3c.3.1.5 0 .7-.1s.3-.4.4-.7l1.6-9.2c.1-.8.5-1.4 1-1.9.6-.4 1.3-.5 2.1-.4.7.1 1.5.5 1.5.5z"/></svg>
+  
+  <span class="md-ellipsis">
+    Theory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../safety/practice/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-8 5H9v2c0 1.1-.9 2-2 2 1.1 0 2 .9 2 2v2h2v2H9c-1.1 0-2-.9-2-2v-1c0-1.1-.9-2-2-2v-2c1.1 0 2-.9 2-2V8c0-1.1.9-2 2-2h2zm8 5c-1.1 0-2 .9-2 2v1c0 1.1-.9 2-2 2h-2v-2h2v-2c0-1.1.9-2 2-2-1.1 0-2-.9-2-2V8h-2V6h2c1.1 0 2 .9 2 2v1c0 1.1.9 2 2 2z"/></svg>
+  
+  <span class="md-ellipsis">
+    Practice
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Assignments
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Assignments
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../assignments/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+  
+  <span class="md-ellipsis">
+    Small Assignment and Large Semester Project
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../assignments/small_assignment/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 19.88V22l-1.8-1.17-4.79-9c.66-.21 1.26-.55 1.78-1zM15 7a3 3 0 0 1-3 3h-.44L5.8 20.83 4 22v-2.12L9.79 9c-1.1-1.23-1-3.13.24-4.24C10.57 4.28 11.27 4 12 4V2a1 1 0 0 1 1 1v1.18c1.2.42 2 1.55 2 2.82m-2 0a1 1 0 0 0-1-1 1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1"/></svg>
+  
+  <span class="md-ellipsis">
+    Small Assignment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../assignments/semester_project/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+  
+  <span class="md-ellipsis">
+    Large Semester Project
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Self-paced
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Self-paced
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ros2halado/py_cpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Comparison of Python and C++
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../self_paced/ros2git/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git and ROS 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../self_paced/linux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../self_paced/ros2launchmarker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ROS 2 Marker and Launch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../self_paced/mermaid/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mermaid Graph
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ros2halado/rqt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rqt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ros2halado/qos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    QoS szolgáltatásminőség
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ros2halado/mcap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MCAP fájlok
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ros2halado/docker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ros2halado/state/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Behavior tree, State machine
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ros2halado/vizualizacio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ROS2 vizualizáció
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ros2halado/pointcloud_to_grid/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pointcloud to grid
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kalman_filter/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Elmélet - Kálmán filter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kalman_filter/practice/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gyakorlat - Kálmán filter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Links
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Links
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../links/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Links
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://szelearning.sze.hu/course/view.php?id=13973" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Moodle
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-motivation-behind-closed-loop-control-introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Motivation behind closed-loop control - introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-architectural-overview-and-retrospective" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Architectural Overview and Retrospective
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-basics-of-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Basics of Control
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Basics of Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1. Definitions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-formulating-the-control-task" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2. Formulating the Control Task
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-example-of-control-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3. Example of Control Basics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-interactive-pid-tuning" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4 Interactive PID Tuning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-vehicle-control-solutions" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Vehicle Control Solutions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Vehicle Control Solutions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inverse-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inverse Models
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#predictive-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Predictive Models
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#closed-loop-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Closed-Loop Models
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommended-literature" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommended Literature
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#driver-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Driver Models
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="control">Control<a class="headerlink" href="#control" title="Permanent link">&para;</a></h1>
+<p>The goal of control is to execute the planned trajectory.</p>
+<p><img alt="" src="https://raw.githubusercontent.com/sze-info/arj/main/docs/_images/overview14.svg" /></p>
+<h2 id="1-motivation-behind-closed-loop-control-introduction">1. Motivation behind closed-loop control - introduction<a class="headerlink" href="#1-motivation-behind-closed-loop-control-introduction" title="Permanent link">&para;</a></h2>
+<p>We can achieve the planned target state of a system by intervening in the system considering the target value. For example, in the case of a vehicle, the target speed can be achieved by manipulating the gas and brake pedals, indirectly changing the engine torque and braking force. As an initial example, let's consider a driver: the driver is usually aware of the maximum allowed speed and applies a tolerance range that is suitable for them. Within this range, they determine a safe and comfortable speed they want to maintain. The driver accelerates until they reach the desired speed, then slightly releases the gas pedal to maintain the speed.</p>
+<p>Is it correct to say that once we have reached the desired speed, we can release the pedal and have nothing more to do? Of course not. Why not? Because the vehicle will slow down due to losses, and it may even accelerate when going downhill. To maintain the speed, the driver must continuously monitor the vehicle's movement and the environment and intervene through the pedals accordingly.</p>
+<p>This simple example covers most of the design and control components. In terms of control, we can make the following observations:
+- the driver senses the current state of the vehicle (with some accuracy)
+- the driver knows what effect will be achieved by intervening with the gas or brake pedal, i.e., how much the car will slow down or speed up (with some accuracy)
+- the driver can roughly (!) determine the desired gas pedal position without any special sensing (i.e., without knowing, for example, what force is acting on the car)</p>
+<p>The last point is often referred to as the <strong>feedforward branch</strong> (see subsection 3), or <strong>open-loop control</strong> (if we have no information from sensing).
+A very rough comparison is shown in Figure 1. Imagine a situation where we have no information about how fast the vehicle is going, we can only control the pedal. The task is to accelerate from a standstill to 90 km/h and then maintain that speed. If we don't know how fast we are going, how do we know whether to press the pedal more or not? In this case, we can rely on knowing the road conditions (e.g., flat terrain, asphalt road), knowing our car (what kind of engine, what torque characteristics, etc.). Thus, we can <em>roughly</em> determine how long to press the gas pedal, and when we have <em>roughly</em> reached the speed, how much to keep our foot on the pedal to avoid slowing down or speeding up. The result will likely resemble the desired speed curve, but it will be far from accurate. We know the road and our car inaccurately, and acceleration is influenced by temperature, slope, headwind, etc. Therefore, we generally do not use this <strong>open-loop</strong> approach alone, but rather correct the predetermined pedal positions with the help of more accurate sensors, thus handling any <strong>disturbance</strong>. This latter approach is called <strong>closed-loop control</strong>, and the information obtained from sensing is called <strong>feedback</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In Hungarian terminology, <em>open-loop control</em> is often referred to as <strong>control</strong>, and <em>closed-loop control</em> is simply called <strong>regulation</strong>. Together, they are referred to as <strong>control</strong>. In English terminology, both are called <strong>control</strong>, specifically <strong>closed-loop control</strong> and <strong>open-loop control</strong>. Feedback is called <strong>feedback</strong>, and feedforward is called <strong>feed-forward</strong>.</p>
+</div>
+<p><img alt="image info" src="arj_control_01.png" /></p>
+<p><em>Figure 1: Motivation behind closed-loop control. Source: Autonomous Driving Software Engineering - Lecture 08: Control</em></p>
+<h2 id="2-architectural-overview-and-retrospective">2. Architectural Overview and Retrospective<a class="headerlink" href="#2-architectural-overview-and-retrospective" title="Permanent link">&para;</a></h2>
+<p>As we have seen in previous chapters, the entire vehicle control chain is modular. The main tasks are:
+- sensing
+- perception
+- planning
+- control</p>
+<p>This chapter focuses on control. The basics of control are covered in subsection 3. The planning provides the input for the control layer. So, let's take a look at the architecture with some additions! This is shown in Figure 2.</p>
+<p><pre class="mermaid"><code>flowchart LR
+
+GP1[Global Planning
+    Inputs:
+    - Driver Profile
+    - Map
+    Output:
+    - Route Plan
+    Goal: to plan a global route
+    from point A to point B,
+    considering traffic data,
+    fuel consumption, etc.]:::light
+
+GP2[I want to travel
+    from point A to point B
+    with a robotaxi]:::dark
+
+BP1[Behavior Planning
+      Inputs:
+      - Route Plan
+      - Perception Information
+      about the environment
+      Output:
+      - Behavior Strategy
+      Goal: to plan how the
+      vehicle should behave,
+      what motion characteristics
+      it should follow]:::light
+
+BP2[I want to follow
+  the middle lane,
+  then switch to the
+  inner lane]:::dark
+
+LP1[Local Planning
+      Inputs:
+      - Behavior Strategy
+      - Map
+      - Pose
+      - Predicted Objects
+      Output:
+      - Local Trajectory
+      Goal: to generate a
+      kinematically feasible,
+      safe trajectory]:::light
+LP2[Plan a safe and
+  smooth path within
+  the lane]:::dark
+
+VC1[Vehicle-Level Control
+      High-Level Control
+      Inputs:
+      - Local Trajectory
+      - Vehicle State Variables
+      - Localization Information
+      Outputs:
+      - Vehicle-Level Target
+      Quantities
+      - Control Constraints
+      Goal: to calculate the
+      vehicle's target state,
+      which the low-level
+      control will implement]:::light
+VC2[Guide the vehicle
+  along the planned
+  trajectory at the
+  appropriate speed]:::dark
+
+AC1[Actuator Control
+  Low-Level Control
+  Inputs:
+  - Vehicle-Level Target
+  Quantities
+  - Control Constraints
+  - Actuator State Variables
+  Outputs:
+  - Actuator Target States
+  Goal: to decompose
+  vehicle-level quantities
+  and implement them
+  through the actuators]:::light
+  AC2[Calculate the
+required motor
+torque and steering
+angle reference]:::dark
+
+subgraph Plan [Planning]
+  GP1
+  BP1
+  LP1
+end
+subgraph Control [Control]
+  VC1
+  AC1
+end
+GP1--&gt;BP1--&gt;LP1--&gt;VC1--&gt;AC1
+GP2-.-BP2-.-LP2-.-VC2-.-AC2
+
+classDef light fill:#34aec5,stroke:#152742,stroke-width:2px,color:#152742  
+classDef dark fill:#152742,stroke:#34aec5,stroke-width:2px,color:#34aec5
+classDef white fill:#ffffff,stroke:#152742,stroke-width:2px,color:#152742
+classDef red fill:#ef4638,stroke:#152742,stroke-width:2px,color:#fff</code></pre>
+<em>Figure 2: The main planning and control layers in the architecture.</em></p>
+<p>The control layer is usually divided into multiple levels. We distinguish at least two such levels:
+- vehicle-level control
+- actuator control</p>
+<p>Each layer has its own tasks. The task of vehicle-level control is to guide the vehicle along the planned trajectory at the appropriate speed. It determines target values at the vehicle level. As a rule of thumb, quantities at the vehicle level are those that are not yet associated with a specific actuator. For example, every car has an acceleration or angular velocity, regardless of its propulsion (electric, hybrid, internal combustion) or steering (electric servo, hydraulic servo, tracked, etc.). This control layer is generally the "slowest," with a cycle time of 10-50ms in an embedded environment.</p>
+<p>The task of actuator control is to decompose vehicle-level quantities and implement them through the actuators. For example, longitudinal acceleration can be influenced through the engine and brakes. In the case of the engine, acceleration is achieved by controlling the engine torque, which is controlled by the throttle position. The throttle position is controlled by the position of the servo motor that moves it, which is controlled by the voltage applied to the servo motor. In the case of the braking system, we can influence the braking force, which means controlling the brake pressure (e.g., through the ESP valves), which is achieved by the pressure of the hydraulic brake system's motor pump. This is influenced by the pump motor's speed, which is controlled by the voltage applied to the motor, and so on. We see that depending on the actuators, we are talking about multiple (even 4-6) nested control loops.</p>
+<p>It is advisable to approach the problem from the inside out, as the innermost control cycle time can be as low as 1 ms (or less), while as we move outward, it increases to the range of 5-10-20ms. It is important that in the case of automated driving systems' motion control, actuator control layers are often not considered, assuming that their performance, accuracy, and speed are adequate, "nearly ideal." Of course, in practice, it is often difficult to separate these, but we strive to design only the vehicle-level control.</p>
+<p>The task of the highest-level control is to follow the trajectory. Generally, we distinguish two dimensions:
+- longitudinal motion: determining the vehicle's longitudinal acceleration, and finally the braking and engine forces.
+- lateral motion: determining the vehicle's target angular velocity, and finally the steering angle.</p>
+<p>The trajectory is usually a speed trajectory described over time or a set of target points given in space, i.e., a curve (or its representation). The goal is to follow the curve with minimal position error and maintain the speed as accurately as possible, without exceeding any limits (e.g., excessive acceleration, leaving the path, etc.).</p>
+<p>Before we move on to existing vehicle control solutions, we will provide an overview of the basics of control in subsection 3.</p>
+<h2 id="3-basics-of-control">3. Basics of Control<a class="headerlink" href="#3-basics-of-control" title="Permanent link">&para;</a></h2>
+<p>In this chapter, we introduce the basic concepts related to control engineering and provide examples from the field of vehicle control.</p>
+<h3 id="31-definitions">3.1. Definitions<a class="headerlink" href="#31-definitions" title="Permanent link">&para;</a></h3>
+<p><strong>Real physical system</strong>: A physical object that changes measurably under measurable external constraints.</p>
+<p><strong>Inputs</strong>: Physical constraints acting on the real physical system that can change over time.<br>
+<strong>Outputs</strong>: Any change in the real physical system due to physical constraints can be considered a physical output. We consider it a physical output if it is directly or indirectly measured in the given study.<br>
+<em>Example: This is always defined according to the control task. For example, vehicle-level control: the system is the vehicle itself, with inputs such as longitudinal and lateral acceleration. Outputs can be position, speed, etc.</em><br>
+<em>Example: In low-level control, this can be, for example, brake control, where the input is the position of the master cylinder, and the output is the force between the brake disc and the brake pad, or the torque acting on the wheel, etc.</em></p>
+<p><strong>Abstract system</strong>: An abstract model of a real physical system with a certain accuracy and valid for a specific operating range, creating a mathematical relationship between input and output signals. This is essentially the result of a modeling process, where the model is the mathematical description of the real physical system, typically in the form of differential equations.<br>
+<em>Example: The kinematic bicycle model of a vehicle</em>.</p>
+<p><strong>System parameters</strong>: The coefficients of the equations describing the real physical system.<br>
+<strong>Time invariance</strong>: A system is time-invariant if the response to an excitation U(t) is Q(t), and the response to a time-shifted excitation U(t-tau) is Y(t-tau). This also means that the system model does not change over time, i.e., the system parameters are constant.<br>
+<em>Example: The parameters of the kinematic bicycle model of a vehicle, such as the wheelbase, which (hopefully) does not change over time, making this parameter time-invariant. If all parameters of the system model are time-invariant, the abstract system itself is invariant.</em><br>
+<em>Example: A parameter of the dynamic bicycle model of a vehicle is the vehicle's mass. This can change "on the go," as more people get in the car, luggage is loaded, the fuel level changes, etc., making this parameter not time-invariant, and thus the physical system is not time-invariant. However, under certain conditions, we can consider it time-invariant, increasing the model's inaccuracy.</em></p>
+<p><strong>State</strong>: In dynamic systems with memory, the state is the cumulative effect of the past. The state of the system must have the following two properties:
+- At any time T, the output can be uniquely determined by knowing the state and input at that moment. The relationship that determines the output from the state and input is called the output equation.
+- The state at a given time T can be uniquely determined by knowing the input over the time range t≤T. The equation describing the state change is called the state equation.</p>
+<p><strong>State variable</strong>: State variables are used to uniquely describe the state. A state variable can be a time function to describe quantitative changes in the state or a logical variable to describe qualitative changes in the state.</p>
+<p><strong>System dimension</strong>: The number of state variables minimally required to uniquely describe the state of a system is called the system dimension.</p>
+<p><strong>Canonical state variables</strong>: Canonical state variables are the smallest set of state variables that can uniquely describe the state. Non-canonical state variables are called derived state variables.</p>
+<p><strong>Lyapunov stability</strong>: A nonlinear autonomous system is said to be Lyapunov stable if, for any neighborhood of the equilibrium state, there exists a maximum deviation greater than zero, within which the system is guaranteed to return to the originally defined neighborhood.</p>
+<p><strong>BIBO stability</strong>: A system is BIBO (Bounded Input Bounded Output) stable if a bounded input always results in a bounded output. A system meeting this condition is called a BIBO stable system.</p>
+<p>These concepts are sufficient to understand the basics of vehicle control. The control task is often divided into two parts:
+- modeling, creating the abstract mathematical model
+- control, designing the controller.</p>
+<h3 id="32-formulating-the-control-task">3.2. Formulating the Control Task<a class="headerlink" href="#32-formulating-the-control-task" title="Permanent link">&para;</a></h3>
+<p><strong>The goal is always to control the real physical system so that it behaves according to the prescribed target value.</strong> It is important to define measurable quantities for each goal to determine the "goodness" of the control. The most commonly (but not exclusively) used quantities are:
+- settling time (speed)
+- overshoot
+- steady-state error
+- control energy.</p>
+<p>The control chain can be described as shown in Figure 3. The following notations are used:</p>
+<ul>
+<li><span class="arithmatex">\(r(t)\)</span>: the target value or reference signal</li>
+<li><span class="arithmatex">\(y(t)\)</span>: the feedback value</li>
+<li><span class="arithmatex">\(m(t)\)</span>: the measured value of the real system. Note: sensors are often considered ideal, so <span class="arithmatex">\(y(t)=m(t)\)</span>, making the feedback value also the output of the abstract system.</li>
+<li><span class="arithmatex">\(e(t)\)</span>: error signal, the input to the controller.</li>
+<li><span class="arithmatex">\(i(t)\)</span>: the control signal determined by the controller.</li>
+<li><span class="arithmatex">\(f(t)\)</span>: feedforward branch.</li>
+<li><span class="arithmatex">\(u(t)\)</span>: the system input</li>
+<li><span class="arithmatex">\(d(t)\)</span>: external disturbances.</li>
+</ul>
+<p><img src="arj_control_03.svg" width="600" height="260" /> <br>
+<em>Figure 3: Block diagram of the control chain.</em></p>
+<p>The controller's task is to minimize the error at its input. The entire control chain's task is to ensure that the output of the real physical system follows the reference signal as accurately as possible.
+In the following, we illustrate the modeling of a system, the effect of disturbances, and provide an example of a controller and the possibility of feedforward. The example is created in MATLAB/Simulink.</p>
+<h3 id="33-example-of-control-basics">3.3. Example of Control Basics<a class="headerlink" href="#33-example-of-control-basics" title="Permanent link">&para;</a></h3>
+<p>In this example, we will build a simple model to illustrate closed-loop control. The task is to control the speed of a vehicle. We will create a simple model of the vehicle.
+1. Task: Determine the inputs and outputs of the system!
+We want to influence the system with the accelerating force acting on the vehicle, so this is the input. The output is the vehicle's speed, as we want to control it to a given target value. Since this system has 1 input and 1 output, it is often called a SISO (Single Input Single Output) system. By analogy, there are also MIMO (Multiple Inputs Multiple Outputs) systems.
+<em>Note: In reality, we influence the vehicle with the gas pedal and the brake pedal, but these actually affect the vehicle's acceleration, so for simplicity, we do not model this part of the section. This, of course, introduces an error into the model but increases its generality.</em></p>
+<ol>
+<li>Task: Create the mathematical model / abstract model of the vehicle!
+We are looking for a system of equations that connects the input and output. Here we need to determine how accurate we want the model to be. For simplicity, let's use the following constraints:</li>
+<li>we disregard the longitudinal wheel slip</li>
+<li>we disregard the dynamic behavior of the actuators, i.e., the requested acceleration is realized immediately</li>
+<li>we disregard the errors affecting the measured quantities, i.e., the inaccuracies of the sensors.</li>
+<li>we disregard the dynamic properties of the chassis and suspension.</li>
+</ol>
+<p>Thus, our equation simplifies to the linear motion of a concentrated mass point. Include the following quantities in the model:
+- the mass of the vehicle
+- the aerodynamic drag of the vehicle
+- the speed-dependent friction of the vehicle.</p>
+<p>According to Newton's second law, write the following dynamic equilibrium equation: <br>
+$$
+\ddot I = \sum F
+$$</p>
+<p>That is:</p>
+<div class="arithmatex">\[
+m*\ddot v(t) = F_{prop}(t) - F_{aero}(t) - F_{fric}(t)
+\]</div>
+<p>We see that both the input and output appear in our equation, so we have indeed found the model of the system. Further transform it so that <em>only</em> the input and output appear in it:</p>
+<div class="arithmatex">\[
+m*\ddot v(t) = F_{prop}(t) - \frac{1}{2}*v(t)^2*\rho*c*A - v(t)*b
+\]</div>
+<p>In this form, the time-varying signals are the input and output (the speed and the driving force), and there are time-invariant parameters:</p>
+<ul>
+<li><span class="arithmatex">\(\rho\)</span>: air density</li>
+<li><span class="arithmatex">\(A\)</span>: frontal area</li>
+<li><span class="arithmatex">\(c\)</span>: vehicle drag coefficient</li>
+<li><span class="arithmatex">\(b\)</span>: Coulomb friction coefficient</li>
+</ul>
+<p><img src="arj_control_04.svg" width="800" height="260" /> <br>
+<em>Figure 4: Modeled force balance of the vehicle.</em></p>
+<p>To obtain the speed as the chosen output, we need to solve the differential equation. This is done numerically in Simulink. The solution is shown in Figure 5.</p>
+<p><img src="arj_control_06.png" width="400" height="130" /> <br>
+<em>Figure 5: Numerical solution of the differential equation.</em></p>
+<p>The block diagram of the entire control chain is shown in Figure 6. In this figure, we do not use the feedback branch. The initial speed is set to 20 m/s. The driving force is zero in this case, so the vehicle rolls due to its inertia and continuously slows down proportionally to the load.</p>
+<p><img src="arj_control_05.png" width="800" height="260" /> <br>
+<em>Figure 6: Block diagram of the entire control chain.</em></p>
+<p>The following parameter values were chosen for the simulation:</p>
+<ul>
+<li><span class="arithmatex">\(A = 1.2m^2\)</span></li>
+<li><span class="arithmatex">\(b = 10 Ns/m\)</span></li>
+<li><span class="arithmatex">\(c = 0.4\)</span></li>
+<li><span class="arithmatex">\(\rho = 1 kg/m^3\)</span></li>
+<li><span class="arithmatex">\(m = 1250 kg\)</span></li>
+</ul>
+<p>The result of the run is shown in Figure 7. The simulation ran for 100s, during which the vehicle slowed down from 20 m/s to about 7 m/s.</p>
+<p><img src="arj_control_07.png" width="400" height="300" /> <br>
+<em>Figure 7: Block diagram of the entire control chain.</em></p>
+<p>In Figure 8, we choose a proportional controller (P controller) for the feedback controller, which determines the control signal proportional to the error. The gain is chosen to be 100, i.e., a 1 m/s speed error results in 100N driving force. The initial speed is 15 m/s, the target speed is 20 m/s, so initially, we will have 500N driving force.</p>
+<p><img src="arj_control_08.png" width="300" height="80" /> <br>
+<em>Figure 8: Proportional controller with a gain of 100.</em></p>
+<p>Figure 9 shows the characteristics of the controller with a P controller and a gain of 100. The steady-state error is relatively large (more than 10%). The reason is that the proportional controller produces an input signal proportional to the error, and since there is an opposing force acting on the vehicle, the controller will balance with it. If we increase the gain, the steady-state error decreases. In theory, infinite gain reduces this error to zero, but infinite gain means infinite control signal, which is not feasible. In practice, we reach the limits much sooner, as the actuators can only exert finite force. This must be taken into account when designing the controller.</p>
+<p><img src="arj_control_09.png" width="400" height="300" /> <br>
+<em>Figure 9: Characteristics of the proportional controller.</em></p>
+<p>We can eliminate the steady-state error by adding a controller term that "notices" if a given error persists for a long time and increases the control signal accordingly. The longer the error persists, the more we increase the control signal. This practically means a control term proportional to the time integral of the error. This is called the I term. The resulting controller is called a PI controller. The arrangement of the controller is shown in Figure 10, and the output characteristics in Figure 11. We see that the error has indeed disappeared, but the initial transient phase has also changed. Overshoot and oscillation around the target value have appeared, and the settling time has also increased.</p>
+<p><img src="arj_control_10.png" width="300" height="120" /> <br>
+<em>Figure 10: Proportional controller with a gain of 100 and integrator with a gain of 10.</em></p>
+<p><img src="arj_control_11.png" width="400" height="300" /> <br>
+<em>Figure 11: Proportional controller with a gain of 100 and integrator with a gain of 10.</em></p>
+<p>We can improve the above settling oscillation and overshoot by changing the parameters or adding a controller term that reacts to the change in error. This speeds up the settling and compensates for the overshoot more quickly. This practically means a term proportional to the change in error, equivalent to considering the derivative of the error. This term is called the D term, and the resulting controller is called a PID controller. However, the gain of the D term must be chosen carefully, as it can easily make the system unstable. The structure of the controller is shown in Figure 12, and its characteristics in Figure 13.</p>
+<p><img src="arj_control_12.png" width="300" height="160" /> <br>
+<em>Figure 12: Proportional controller with a gain of 100, integrator with a gain of 10, and D term with a gain of 10.</em></p>
+<p><img src="arj_control_13.png" width="400" height="300" /> <br>
+<em>Figure 13: Proportional controller with a gain of 100, integrator with a gain of 10, and D term with a gain of 10.</em></p>
+<p>Empirically, considering the amount of overshoot, settling time, and steady-state error, choose the following parameter values:</p>
+<div class="arithmatex">\[
+P=175, 
+I=10, 
+D=50
+\]</div>
+<p>With this, the settling is very nice, as shown in Figure 14.<br>
+<img src="arj_control_14.png" width="400" height="300" /> <br>
+<em>Figure 14: Proportional controller with a gain of 170, integrator with a gain of 10, and D term with a gain of 50.</em></p>
+<p>Figure 15 shows the effect of adding an extra accelerating force caused by a 3° slope. The overshoot is larger because the controller was tuned with a model assuming a vehicle moving on flat terrain.</p>
+<p><img src="arj_control_15.png" width="400" height="300" /> <br>
+<em>Figure 15: Effect of slope on the closed-loop controller.</em></p>
+<p>We can compensate for this by creating a feedforward branch proportional to the slope. However, estimating the slope is difficult; we can generally infer it from the vehicle's motion, which only indicates the slope magnitude with a delay. Add a slope compensation with a 1s delay and a 5% error. The block diagram is shown in Figure 16, and the result in Figure 17.</p>
+<p><img src="arj_control_16.png" width="600" height="180" /> <br>
+<em>Figure 16: Control system with added feedforward branch.</em></p>
+<p><img src="arj_control_17.png" width="400" height="300" /> <br>
+<em>Figure 17: Effect of feedforward branch on the controller.</em></p>
+<h3 id="34-interactive-pid-tuning">3.4 Interactive PID Tuning<a class="headerlink" href="#34-interactive-pid-tuning" title="Permanent link">&para;</a></h3>
+<p>Next, you can interactively tune a PID controller in another control example (temperature control):</p>
+<iframe width="700" height="600" src="https://thomasfermi.github.io/PID-Playground-Temperature/" frameborder="0" allowfullscreen> </iframe>
+
+<p>This interactive visualization is a solution by <a href="https://thomasfermi.github.io/Algorithms-for-Automated-Driving/Control/PID.html">Mario Theers</a> - <a href="https://github.com/thomasfermi/Algorithms-for-Automated-Driving/blob/master/LICENSE">CC BY 4.0 License</a>.</p>
+<p>A similar interactive visualization is available on Viktor.ai, where you can also tune the parameters: <a href="https://cloud.viktor.ai/public/control-application">cloud.viktor.ai/public/control-application</a></p>
+<h3 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h3>
+<p>In this chapter, we reviewed the basic concepts of control engineering and provided examples from the field of vehicle control. Additionally, we created a simple mathematical model that describes the longitudinal motion of a vehicle as a mass point. Through this, we conducted a speed control simulation using MATLAB/Simulink. We introduced one of the most common controllers, the PID controller.
+Key points to remember:
+- A closed-loop control system typically consists of the controlled section (which is the abstract mathematical model of the real physical system) and the controller.
+- The real physical system is described by a mathematical model, which also serves as the basis for designing the controller. The accuracy of the model affects the quality of the designed controller.
+- The mathematical model is usually presented in the form of differential equations.
+- PID controllers aim to minimize the error. The P term speeds up the system, the I term eliminates the steady-state error, and the D term also speeds up the controller's response but can cause instability.
+- In reality, vehicle control is complex due to varying parameters (e.g., vehicle mass), road conditions, and nested control loops.</p>
+<h2 id="4-vehicle-control-solutions">4. Vehicle Control Solutions<a class="headerlink" href="#4-vehicle-control-solutions" title="Permanent link">&para;</a></h2>
+<p>In the field of vehicle control, as seen in subsection 2, multiple nested control loops are used. Each typically contains a feedforward and a feedback branch. In automated driving systems, the highest-level, vehicle-level control is usually considered first. We will not delve into lower-level controllers here, but we will summarize them in a list. It should be noted that these low-level controllers depend heavily on the available actuators in the vehicle, as various braking systems, drives, and steering systems may be available. This division greatly supports modular design, allowing vehicle-level control to be developed independently of low-level controls. This, for example, greatly facilitates reusability in mass-produced software. The low-level, actuator control loops can include (without being exhaustive):
+- Steering servo motor angle control
+- Steering servo motor torque control
+- Engine torque control
+- Brake force control (brake pressure control).</p>
+<p>From this point on, all statements apply to the vehicle level. It is important to note that we always think in two dimensions: longitudinal and lateral control. We saw an example of longitudinal control in subsection 3. This generally means speed control or possibly acceleration control. Although longitudinal control also poses significant challenges (engine inertia, separation of braking and driving forces, etc.), most vehicle control solutions primarily focus on lateral control.
+Since the task of automatic vehicle control is very similar to human driving (i.e., influencing the vehicle's movement using the steering wheel and pedals), these control solutions are often referred to as driver models. Short summaries of each model can be found under the recommended literature. According to [1], driver models can be divided into three groups:
+- Inverse models
+- Predictive models
+- Closed-loop models.</p>
+<p><img alt="" src="https://raw.githubusercontent.com/jkk-research/wayp_plan_tools/main/csv/control_overview01.svg" />
+<em>Figure 18: Illustration of vehicle control solutions.</em></p>
+<h3 id="inverse-models">Inverse Models<a class="headerlink" href="#inverse-models" title="Permanent link">&para;</a></h3>
+<p>Inverse models are also known as pursuit models in English terminology, which can be best translated as forward-looking or forward-pushing. The essence is that the target value for steering is determined based on two pieces of information:
+- What is the target state of the vehicle at a look-ahead point?
+- The pre-established model of the vehicle.
+This can be considered as a feedforward control branch or open-loop control, i.e., control. If the latter is the case (i.e., there is no feedback branch), it is called pure pursuit control.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Pure-pursuit control is one of the oldest control solutions in the field of vehicles. It was developed by the Robotics Institute of Pittsburgh in the 1980s [4]. The essence is that at a given look-ahead distance (which is the most important parameter of the control), we determine the desired position of the vehicle (e.g., based on the previously planned trajectory).</p>
+</div>
+<p>Based on the coordinates of this point, we can determine the curvature of the circular arc we need to follow to reach the target point from the current point. It is important to note that pure-pursuit control always uses circular arcs. The geometric relationships are illustrated in Figure 19.
+Based on simple trigonometric considerations, the following relationship can be established between the look-ahead point and the target curvature:</p>
+<div class="arithmatex">\[
+\kappa_{target}=\frac{2x}{l^2}
+\]</div>
+<p>As we can see, we have formulated a quantity (curvature) at the vehicle level based on the input trajectory, thus theoretically fulfilling the main task of vehicle control. However, during implementation, we usually produce a quantity that is already interpretable at the actuator level. For this, we use the vehicle model: we provide a relationship between the target curvature and the steering angle. The most commonly used model is the kinematic bicycle model of the vehicle, but it becomes very inaccurate at higher speeds (&gt;10 km/h). Using the relationships of the kinematic bicycle model, we can obtain the steering angle:</p>
+<div class="arithmatex">\[
+\delta_f=atan(L_w*\kappa)
+\]</div>
+<p>Where <span class="arithmatex">\(L_w\)</span> is the wheelbase of the vehicle.</p>
+<p>We assume in the model that the vehicle is front-wheel steering. The obtained angle is the road-wheel angle, which can be converted to, for example, servo motor angle based on the geometry of the steering mechanism, and thus can be directly implemented.</p>
+<p><img alt="" src="https://raw.githubusercontent.com/sze-info/arj/main/docs/transzformaciok/vehicle_axes01.svg" />
+<img alt="" src="arj_control_18.svg" />
+<em>Figure 19: Geometric relationships of the pure pursuit controller.</em></p>
+<p>Figure 20 shows the effect of the look-ahead distance on the vehicle's behavior. If we choose a point that is too close, the vehicle tends to oscillate (similar to the effect of a PID controller with too high a P gain). If the look-ahead distance is too large, the reaction slows down, but in sharp turns, the vehicle tends to cut corners.
+It is common to adaptively set the look-ahead distance, for example, as a function of speed. In this case, we are practically talking about look-ahead time.</p>
+<p><center>
+<img src="arj_control_19_look_ahead.svg" width="90%"/>
+</center></p>
+<p><em>Figure 20: Effect of look-ahead distance on vehicle behavior in pure pursuit control</em></p>
+<p>Further developed versions of pure-pursuit models can be found in articles [2] and [3].</p>
+<h3 id="predictive-models">Predictive Models<a class="headerlink" href="#predictive-models" title="Permanent link">&para;</a></h3>
+<p>Predictive models, similar to inverse models, are based on the vehicle model. However, they also look ahead over a specified horizon: using the model, we estimate the vehicle's behavior in advance and then choose the best solution in the present based on this. Thus, in this case, we make decisions using future information with a certain accuracy. Here we distinguish between two cases:
+- Receding horizon: the future horizon continuously shifts ahead of us, as we always execute only the first element of the planned future behavior, then replan.
+- Proceeding horizon: the horizon approaches us, meaning we fully execute the planned future behavior and only then replan.</p>
+<p>Since control here also involves motion planning, we must use the tools of planning. These controllers are also called <strong>Optimal Controllers</strong>. In this case, we plan the motion over the look-ahead horizon using the model to achieve the lowest cost according to the given criteria. Here we refer back to the criteria introduced at the beginning of subsection 3.2:
+- Settling time (speed)
+- Overshoot
+- Steady-state error
+- Control energy.</p>
+<p>Since we want to plan the optimal motion over a finite-length time horizon, we combine the settling time, overshoot, and steady-state error into a vector and aim to minimize the sum of the elements of this vector (1st criterion).
+Control energy is related to the amplitude of the control signal vector. That is, we want to achieve the best result with the lowest possible signal (e.g., we want to accelerate or apply torque to the steering wheel as little as possible). This is the 2nd criterion, which imposes an opposing requirement on control compared to the 1st criterion.</p>
+<p>These controllers are also called <strong>Model Predictive Controllers (MPC)</strong>. The following equation is an example of how to formulate the cost function to be solved:</p>
+<div class="arithmatex">\[
+J(k)=\sum_{i=1}^{N_p}\|y(k+i)-y_{ref}(k+i)\|^2_M + \sum_{i=1}^{N_c-1}\|\Delta U(k+i)\|^2_N
+\]</div>
+<p>Where:</p>
+<ul>
+<li><span class="arithmatex">\(N_p\)</span>: prediction horizon, expressed in computation cycles (considering the model)</li>
+<li><span class="arithmatex">\(k\)</span>: the current computation cycle</li>
+<li><span class="arithmatex">\(y(k+i)\)</span>: the vehicle's lateral position estimated by the model in the <span class="arithmatex">\(i\)</span>th cycle</li>
+<li><span class="arithmatex">\(y_{ref}(k+i)\)</span>: the reference position (target position) in the <span class="arithmatex">\(i\)</span>th cycle</li>
+<li><span class="arithmatex">\(N_c\)</span>: control horizon (considering the input)</li>
+<li><span class="arithmatex">\(\Delta U\)</span>: the increment of the input vector over the control horizon</li>
+<li><span class="arithmatex">\(M\)</span> and <span class="arithmatex">\(N\)</span>: weight matrices for the error and input energy.</li>
+</ul>
+<p>Examples of such controllers can be found in literature [1], [5-7].
+The advantage of MPCs is that they provide very high accuracy and stable control if the applied model is highly accurate. However, this is also their disadvantage, as if the model is not appropriate, the error can grow exponentially.
+We see an example of this in Figures 21-23. In each simulation, we used a kinematic bicycle model to design the MPC. The PID controller minimizes the position error. In the simulation, we applied the vehicle's dynamic model as the real physical system. It can be seen that at 5 m/s, the MPC clearly outperforms the PID controller, being much more accurate and stable. However, at 2 m/s, the MPC falls apart, as the model relationships are not valid at low speeds. A similar observation can be made in Figure 23.
+In Figure 22, we see that up to 10 m/s, both the MPC and PID perform well, with the MPC still being better than the PID. However, above 10 m/s, dynamic effects become more pronounced, and the kinematic model is not suitable. Thus, the MPC becomes unstable, while the PID, although with significant error, continues to operate stably.</p>
+<p><img src="arj_control_20.png" width="500" height="350" /> <br>
+<em>Figure 21: Comparison of MPC and PID controllers using a kinematic model, turning at low speeds</em></p>
+<p><img src="arj_control_21.png" width="500" height="350" /> <br>
+<em>Figure 22: Comparison of MPC and PID controllers using a kinematic model, turning at higher speeds</em></p>
+<p><img src="arj_control_22.png" width="500" height="350" /> <br>
+<em>Figure 23: Comparison of MPC and PID controllers using a kinematic model, circular path at low speeds</em></p>
+<h3 id="closed-loop-models">Closed-Loop Models<a class="headerlink" href="#closed-loop-models" title="Permanent link">&para;</a></h3>
+<p>As the name suggests, these models are based on the logic of PID controllers. They typically minimize the error of one or more feedback quantities. Examples of such models can be found in literature [3] and [8]. Figure 24 illustrates an example presented in [3]. According to this, two look-ahead points are designated: a near one (in front of the vehicle) and a far one (on the horizon). Similar to pure-pursuit solutions, here we also examine how to get from the current position to the distant one. However, this is achieved not by simple curvature calculation but by minimizing the error according to the following equation:</p>
+<div class="arithmatex">\[
+\phi=k_f\dot\Theta_f + k_n\dot\Theta_n + k_i\Theta_n 
+\]</div>
+<p>Where:</p>
+<ul>
+<li><span class="arithmatex">\(\dot\Theta_f\)</span> and <span class="arithmatex">\(\dot\Theta_n\)</span> are the angular velocities of the far and near points relative to us</li>
+<li><span class="arithmatex">\(\Theta_n\)</span> is the angle of the near point relative to us</li>
+<li><span class="arithmatex">\(k\)</span> terms: weights</li>
+<li><span class="arithmatex">\(\phi\)</span>: the steering wheel angle.</li>
+</ul>
+<p>This equation essentially minimizes the angular errors, as the goal is to always be "on course." The feedback comes from environmental sensing. The output is the steering wheel angle.</p>
+<p><img src="arj_control_23.png" width="300" height="80" /></p>
+<p><em>Figure 24: Illustration of the dual-point control solution</em></p>
+<p>Figure 25 shows the solution described in [8]. The essence is to minimize the position error using multiple nested PID controllers. To do this, the control task is divided into low-frequency control (position error) and high-frequency control (steering angle error). The transfer functions represent individual controllers, sequentially meaning:</p>
+<ul>
+<li><span class="arithmatex">\(G_c\)</span>: position control with a PI controller</li>
+<li><span class="arithmatex">\(G_L\)</span>: human control delay (reaction time)</li>
+<li><span class="arithmatex">\(G_NM\)</span>: neuromotor control, representing how humans move the steering wheel. Its dynamics depend heavily on human muscle structure.</li>
+<li><span class="arithmatex">\(G_{P1}\)</span> and <span class="arithmatex">\(G_{P2}\)</span>: sensor models in the feedback loop. These represent human sensory dynamics, respectively for torque on the steering wheel and steering angle.</li>
+</ul>
+<p><img src="arj_control_24.png" width="500" height="300" /></p>
+<p><em>Figure 25: A complete closed-loop controller, integrating steering angle control</em></p>
+<h3 id="summary_1">Summary<a class="headerlink" href="#summary_1" title="Permanent link">&para;</a></h3>
+<p>As we have seen, driver models always require a pre-planned trajectory. Controllers are used to follow this trajectory, which can be categorized into three groups:</p>
+<ul>
+<li>Inverse models</li>
+<li>Predictive models</li>
+<li>Closed-loop models.</li>
+</ul>
+<p>The oldest inverse models are the simplest and most robust, but their performance is generally low. Predictive models are very accurate but highly sensitive to model accuracy. Closed-loop models are stable over a wide range but generally have low accuracy. They consist of multiple nested loops, typically calibrated from the inside out. These are the most common in today's mass-produced systems.</p>
+<h2 id="recommended-literature">Recommended Literature<a class="headerlink" href="#recommended-literature" title="Permanent link">&para;</a></h2>
+<ol>
+<li><a href="https://ctms.engin.umich.edu/CTMS/?example=Introduction&amp;section=ControlPID">Introduction: System Modeling, University of Michigan</a></li>
+<li><a href="https://www.mathworks.com/campaigns/products/control-tutorials.html">Interactive Live Script Control Tutorials for MATLAB and Simulink</a></li>
+<li><a href="https://thomasfermi.github.io/Algorithms-for-Automated-Driving/Control/PID.html">Mario Theers - PID</a> - <a href="https://github.com/thomasfermi/Algorithms-for-Automated-Driving/blob/master/LICENSE">CC BY 4.0 License</a></li>
+<li><a href="https://thomasfermi.github.io/Algorithms-for-Automated-Driving/Control/PurePursuit.html">Mario Theers - Pure pursuit</a> - <a href="https://github.com/thomasfermi/Algorithms-for-Automated-Driving/blob/master/LICENSE">CC BY 4.0 License</a></li>
+<li><a href="https://www.youtube.com/@ControlLectures/videos">Youtube ControlLectures</a></li>
+<li><a href="https://dtk.tankonyvtar.hu/bitstream/handle/123456789/3269/Bokor_Gaspar_Soumelidis_Iranyitastechnika_II.pdf">Bokor József &amp; Gáspár Péter. Irányítástechnika</a></li>
+</ol>
+<h2 id="driver-models">Driver Models<a class="headerlink" href="#driver-models" title="Permanent link">&para;</a></h2>
+<ol>
+<li>A. Y. Ungoren and H. Peng, "An Adaptive Lateral Preview Driver Model," Vehicle System Dynamics, vol. 43, pp. 245-259, 2005.</li>
+<li>W. Rui, L. Ying, F. Jiahao, W. Tan and C. Xuetao, "A Novel Pure Pursuit Algorithm for Autonomous Vehicles Based on Salp Swarm Algorithm and Velocity Controller," IEEE Access, vol. 8, pp. 166525-166540, 2020.</li>
+<li>D. Salvucci and R. Gray, "A Two-Point Visual Control Model of Steering," Perception, vol. 33, pp. 1233-1248, 2004.</li>
+<li>C. R. Coulter, "Implementation of the Pure Pursuit Path Tracking Algorithm," Vols. CMU-RI-TR-92-01, pp. 1-15, 1992.</li>
+<li>H. Jiang, H. Tian and Y. Hua, "Model predictive driver model considering the steering characteristics of the skilled drivers," Advances in Mechanical Engineering, vol. 11, pp. 1-14, 2019.</li>
+<li>U. Kiencke, R. Majjad and S. Kramer, "Modeling and performance analysis of a hybrid driver model," Control Engineering Practice, vol. 7, pp. 985-991, 1999.</li>
+<li>C. MacAdam, "An Optimal Preview Control for Linear Systems," Journal of Dynamic Systems, Measurement and Control, vol. 102, pp. 188-190, 1980.</li>
+<li>R. Hess and A. Modjtahedzadeh, "A Control Theoretic Model of Driver Steering Behavior," IEEE Control Systems Magazine, vol. 5, no. 8, pp. 3-8, 1990.</li>
+</ol>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; Széchenyi István University 
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://jkk-research/jkk-research.github.io" target="_blank" rel="noopener" title="jkk-research" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["search.suggest", "content.code.copy", "content.code.select", "content.tabs.link", "navigation.tabs", "navigation.top", "toc.follow"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../pymdownx.inlinehilite"></script>
+      
+        <script src="../pymdownx.snippets"></script>
+      
+        <script src="../pymdownx.superfences"></script>
+      
+    
+  </body>
+</html>
